@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Navbar() {
+export default function LoginNavbar() {
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-10 bg-emerald-500 mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-10 bg-red-600 mb-3">
         <svg
           className="w-6 h-6"
           fill="none"
