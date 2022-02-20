@@ -3,7 +3,7 @@ import React from "react";
 const SignUp = () => {
   return (
     <div className="flex justify-center">
-      <div className="flex-col flex-wrap mt-10 w-1/3 shadow">
+      <div className="flex-col flex-wrap mt-10 w-1/3 shadow-2xl">
         <input
           className="h-14 m-2 p-1 w-4/5 rounded-md border-2 border-gray-400 hover:border-red-300"
           placeholder="email"
