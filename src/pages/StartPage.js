@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import LoginNavbar from "./LoginNavbar";
-import Login from "./Login";
-import SignUp from "./Signup";
+import LoginNavbar from "../components/startpage/LoginNavbar";
+import Login from "../components/startpage/Login";
+import SignUp from "../components/startpage/Signup";
 
-const HomePage = () => {
+const StartPage = () => {
   const [loggingIn, setLoggingIn] = useState(true);
   return (
     <div>
@@ -17,4 +17,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default StartPage;
