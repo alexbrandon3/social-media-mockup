@@ -1,6 +1,6 @@
 import React from "react";
 
-const SignUp = () => {
+const SignUp = ({ loggingIn, setLoggingIn }) => {
   return (
     <div className="flex justify-center">
       <div className="flex-col flex-wrap mt-10 w-1/3 shadow-2xl">
@@ -18,7 +18,10 @@ const SignUp = () => {
           Login
         </button>
         <hr />
-        <button className="h-14 m-2 p-1 w-4/5 rounded-md border-2 text-white bg-green-600 hover:bg-green-700">
+        <button
+          onClick={() => setLoggingIn(!loggingIn)}
+          className="h-14 m-2 p-1 w-4/5 rounded-md border-2 text-white bg-green-600 hover:bg-green-700"
+        >
           Create an Account
         </button>
       </div>
