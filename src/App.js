@@ -1,12 +1,10 @@
 import "./App.css";
-import LoginNavbar from "./components/LoginNavbar.js";
-import SignUp from "./components/SignUp";
+import HomePage from "./components/homepage/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <LoginNavbar />
-      <SignUp />
+      <HomePage />
     </div>
   );
 }
