@@ -1,5 +1,3 @@
-import React from "react";
-
 const SignUp = ({ loggingIn, setLoggingIn }) => {
   return (
     <div className="flex justify-center">

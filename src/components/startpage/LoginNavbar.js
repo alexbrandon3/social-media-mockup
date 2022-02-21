@@ -1,25 +1,12 @@
-import React from "react";
-
 export default function LoginNavbar() {
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-10 bg-red-600 mb-3">
+      <nav className="sticky top-0 z-50 relative flex flex-wrap items-center justify-between px-2 py-10 bg-purple-600 mb-3">
         <div className="flex items-center space-x-4">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-          <h1 className="text-white text-3xl">Creative Title Here</h1>
+          <span className="text-gray-300 text-5xl">Welcome to</span>
+          <span className="text-white text-5xl font-medium">
+            Creative Title Here
+          </span>
         </div>
       </nav>
     </>

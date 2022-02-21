@@ -1,9 +1,10 @@
 import React from "react";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
+import defaultIcon from "./assets/images/picture.png";
 
 const NavBar = () => {
   return (
-    <div className="sticky h-12 w-full flex items-center bg-red-600">
+    <div className="sticky top-0 z-50 h-12 w-full flex items-center bg-purple-600">
       <div className="flex-3 flex w-2/12">
         <span className="text-2xl ml-5 font-bold text-white cursor-pointer">
           App Name
@@ -38,9 +39,9 @@ const NavBar = () => {
           </span>
         </div>
         <img
-          src="../../public/assets/images/default.png"
-          alt="Default"
-          className="w-8 h-8"
+          src={defaultIcon}
+          alt={"Default"}
+          className="w-8 h-8 rounded-2xl"
         />
       </div>
     </div>
