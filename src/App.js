@@ -5,8 +5,8 @@ function App() {
   return (
     <>
       <div>
-        <StartPage />
-        {/* <HomePage /> */}
+        {/* <StartPage /> */}
+        <HomePage />
       </div>
     </>
   );

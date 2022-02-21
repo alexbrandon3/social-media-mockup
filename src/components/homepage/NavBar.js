@@ -14,7 +14,7 @@ const NavBar = () => {
         <div className="w-full h-8 rounded-2xl bg-white flex align-center">
           <Search className="text-xl mt-1 ml-3" />
           <input
-            className="border-transparent focus:outline-none w-9/12"
+            className="border-none focus:outline-none w-9/12"
             placeholder="Search for friends, posts, or videos"
           />
         </div>
@@ -25,16 +25,16 @@ const NavBar = () => {
           <span className="mr-3 text-sm cursor-pointer">Timeline</span>
         </div>
         <div className="flex ">
-          <Person className="ml-4 relative cursor-pointer" />
+          <Person className="ml-2 relative cursor-pointer" />
           <span className="w-5 h-5 bg-black rounded-2xl flex items-center justify-center cursor-default">
             1
           </span>
-          <Chat className="ml-4 mr-2 relative cursor-pointer" />
+          <Chat className="ml-2 mr-2 relative cursor-pointer" />
           <span className="w-5 h-5 bg-black rounded-2xl flex items-center justify-center cursor-default">
             2
           </span>
-          <Notifications className="ml-4 relative cursor-pointer" />
-          <span className="w-5 h-5 bg-black rounded-2xl flex items-center justify-center cursor-default">
+          <Notifications className="ml-2 relative cursor-pointer" />
+          <span className="w-5 h-5 mr-6 bg-black rounded-2xl flex items-center justify-center cursor-default">
             3
           </span>
         </div>
