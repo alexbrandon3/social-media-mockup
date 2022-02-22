@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="sticky top-0 z-50 h-12 w-full flex items-center bg-purple-600">
       <div className="flex-3 flex w-2/12">
-        <span className="text-2xl ml-5 font-bold text-white cursor-pointer">
+        <span className="md:text-2xl sm:text-lg ml-5 font-bold text-white cursor-pointer">
           App Name
         </span>
       </div>
@@ -14,7 +14,7 @@ const NavBar = () => {
         <div className="w-full h-8 rounded-2xl bg-white flex align-center">
           <Search className="text-xl mt-1 ml-3" />
           <input
-            className="border-none focus:outline-none w-9/12"
+            className="border-none focus:outline-none md:w-9/12 sm:w-full"
             placeholder="Search for friends, posts, or videos"
           />
         </div>
