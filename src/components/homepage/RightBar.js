@@ -1,6 +1,8 @@
 import { Cake } from "@mui/icons-material";
 import ad from "./assets/images/ad.png";
 import defaultIcon from "./assets/images/picture.png";
+import { Users } from "../../dummyData";
+import Online from "./rightbar/Online";
 
 const RightBar = () => {
   return (
@@ -21,17 +23,9 @@ const RightBar = () => {
         />
         <h4 className="mb-5 font-medium text-lg">Online Friends</h4>
         <ul className="m-0 p-0">
-          <li className="flex items-center mb-4">
-            <div className="mr-2 flex items-center">
-              <span className="h-3 w-3 mr-2 rounded-2xl bg-green-600"></span>
-              <img
-                className="w-10 h-10 object-cover rounded-2xl cursor-pointer"
-                src={defaultIcon}
-                alt="friend"
-              />
-            </div>
-            <span className="font-medium cursor-pointer">User Name</span>
-          </li>
+          {Users.map((u) => (
+            <Online key={u.id} user={u} />
+          ))}
         </ul>
       </div>
     </div>

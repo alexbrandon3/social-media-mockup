@@ -1,8 +1,10 @@
-import defaultIcon from "../assets/images/picture.png";
 import { MoreVert, ThumbUp, Favorite } from "@mui/icons-material";
+import { Users } from "../../../dummyData";
 
 const Post = ({ post }) => {
-  console.log(post);
+  const user = Users.filter((u) => u.id === 1);
+  console.log(user[0].username);
+
   return (
     <div className="w-full rounded shadow-2xl">
       <div className="p-3">
@@ -10,11 +12,11 @@ const Post = ({ post }) => {
           <div className="flex items-center justify-between mt-2">
             <img
               className="w-8 h-8 rounded-2xl object-cover"
-              src={defaultIcon}
+              src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
               alt="poster's profile img"
             />
             <span className="text-base mr-2 ml-2 font-medium">
-              Poster's Username
+              {Users.filter((u) => u.id === post.userId)[0].username}
             </span>
             <span className="text-xs">{post.date}</span>
           </div>

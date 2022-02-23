@@ -9,12 +9,13 @@ import {
   Event,
   School,
 } from "@mui/icons-material";
-import defaultIcon from "./assets/images/picture.png";
 import "./SideBar.css";
+import { Users } from "../../dummyData";
+import CloseFriend from "./sideBar/CloseFriend";
 
 const SideBar = () => {
   return (
-    <div className="w-1/4 h-full overflow-y-scroll scrollbar-track-gray-100 scrollbar-thumb-gray-400">
+    <div className="w-1/4 h-full overflow-y-scroll scrollbar-track-gray-100 scrollbar-thumb-gray-400 sticky top-12 z-50">
       <div className="p-5">
         <ul className="p-0 m-0 list-none">
           <li className="flex items-center mb-5">
@@ -59,94 +60,9 @@ const SideBar = () => {
         </button>
         <hr className="mt-5 mb-5" />
         <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
-        </ul>
-        <ul>
-          <li className="flex items-center mb-4">
-            <img
-              className="w-8 h-8 mr-2 rounded-2xl object-cover"
-              src={defaultIcon}
-              alt="avatar"
-            />
-            <span className="">User Coming Soon</span>
-          </li>
+          {Users.map((u) => (
+            <CloseFriend key={u.id} user={u} />
+          ))}
         </ul>
       </div>
     </div>
