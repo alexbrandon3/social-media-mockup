@@ -2,7 +2,8 @@ import { MoreVert, ThumbUp, Favorite } from "@mui/icons-material";
 import { Users } from "../../../dummyData";
 import { useState } from "react";
 
-const Post = ({ post }) => {
+const ProfilePost = ({ post }) => {
+  console.log(post);
   const [like, setLike] = useState(post.like);
   const [isLiked, setIsLiked] = useState(false);
 
@@ -60,4 +61,4 @@ const Post = ({ post }) => {
   );
 };
 
-export default Post;
+export default ProfilePost;
