@@ -5,14 +5,14 @@ import RightBar from "../components/homepage/RightBar";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <NavBar />
       <div className="flex w-full h-full">
         <SideBar />
         <Feed />
         <RightBar />
       </div>
-    </div>
+    </>
   );
 };
 
