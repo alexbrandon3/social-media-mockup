@@ -6,9 +6,6 @@ import RightBar from "../components/homepage/RightBar";
 import Background from "../components/homepage/assets/images/background.jpg";
 import DefaultAvatar from "../components/homepage/assets/images/picture.png";
 
-// import ProfileFeed from "../components/homepage/ProfileFeed";                 I added these two components to change the CSS rules to
-// import ProfileRightBar from "../components/homepage/ProfileRightBar";        adapt to the screen appropriately, but they don't seem to work.
-
 const ProfilePage = () => {
   return (
     <>
@@ -29,7 +26,7 @@ const ProfilePage = () => {
                 alt="Profile"
               />
             </div>
-            <div className="flex flex-column items-center justify-center">
+            <div className="flex flex-column items-center justify-center -mt-6">
               <h4 className="text-2xl">Username Here</h4>
             </div>
           </div>
