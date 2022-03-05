@@ -1,6 +1,7 @@
 import React from "react";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
 import defaultIcon from "./assets/images/picture.png";
+import "./Navbar.css";
 
 const NavBar = () => {
   return (
@@ -24,19 +25,19 @@ const NavBar = () => {
           <span className="mr-3 ml-5 text-sm cursor-pointer">Home</span>
           <span className="mr-3 text-sm cursor-pointer">Timeline</span>
         </div>
-        <div className="flex ">
-          <Person className="ml-2 relative cursor-pointer" />
-          <span className="w-5 h-5 bg-black rounded-2xl flex items-center justify-center cursor-default">
-            1
-          </span>
-          <Chat className="ml-2 mr-2 relative cursor-pointer" />
-          <span className="w-5 h-5 bg-black rounded-2xl flex items-center justify-center cursor-default">
-            2
-          </span>
-          <Notifications className="ml-2 relative cursor-pointer" />
-          <span className="w-5 h-5 mr-6 bg-black rounded-2xl flex items-center justify-center cursor-default">
-            3
-          </span>
+        <div className="topbarIcons">
+          <div className="topbarIconItem">
+            <Person />
+            <span className="topbarIconBadge">1</span>
+          </div>
+          <div className="topbarIconItem">
+            <Chat />
+            <span className="topbarIconBadge">2</span>
+          </div>
+          <div className="topbarIconItem">
+            <Notifications />
+            <span className="topbarIconBadge">1</span>
+          </div>
         </div>
         <img
           src={defaultIcon}

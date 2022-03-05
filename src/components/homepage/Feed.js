@@ -1,11 +1,12 @@
 import Share from "./feed/Share";
 import Post from "./feed/Post";
+import "./feed/Feed.css";
 import { Posts } from "../../dummyData";
 
-const Feed = () => {
+export default function Feed() {
   return (
-    <div className="w-2/4 p-4 h-full">
-      <div className="">
+    <div className="feed">
+      <div className="feedWrapper">
         <Share />
         {Posts.map((p) => (
           <Post key={p.id} post={p} />
@@ -13,6 +14,4 @@ const Feed = () => {
       </div>
     </div>
   );
-};
-
-export default Feed;
+}

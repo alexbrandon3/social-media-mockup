@@ -7,8 +7,8 @@ function App() {
     <>
       <div>
         {/* <StartPage /> */}
-        {/* <HomePage /> */}
-        <ProfilePage />
+        <HomePage />
+        {/* <ProfilePage /> */}
       </div>
     </>
   );

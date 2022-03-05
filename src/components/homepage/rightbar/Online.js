@@ -1,17 +1,13 @@
-const Online = ({ user }) => {
+import "./Online.css";
+
+export default function Online({ user }) {
   return (
-    <li className="flex items-center mb-4">
-      <div className="mr-2 flex items-center">
-        <span className="h-3 w-3 mr-2 rounded-2xl bg-green-600"></span>
-        <img
-          className="w-10 h-10 object-cover rounded-2xl cursor-pointer"
-          src={user.profilePicture}
-          alt="friend"
-        />
+    <li className="rightbarFriend">
+      <div className="rightbarProfileImgContainer">
+        <img className="rightbarProfileImg" src={user.profilePicture} alt="" />
+        <span className="rightbarOnline"></span>
       </div>
-      <span className="font-medium cursor-pointer">{user.username}</span>
+      <span className="rightbarUsername">{user.username}</span>
     </li>
   );
-};
-
-export default Online;
+}

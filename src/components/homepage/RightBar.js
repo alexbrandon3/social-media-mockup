@@ -3,26 +3,21 @@ import ad from "./assets/images/ad.png";
 import defaultIcon from "./assets/images/picture.png";
 import { Users } from "../../dummyData";
 import Online from "./rightbar/Online";
+import "./rightbar/Rightbar.css";
 
-const RightBar = ({ profile }) => {
-  const HomeRightBar = () => {
+export default function Rightbar({ profile }) {
+  const HomeRightbar = () => {
     return (
       <>
-        <div className="flex items-center">
+        <div className="birthdayContainer">
           <Cake className="mr-2" />
-          <span className="font-light">
-            <b className="cursor-pointer">FriendName</b> and{" "}
-            <b className="cursor-pointer">4 other friends</b> have birthdays
-            today.
+          <span className="birthdayText">
+            <b>Friend Name</b> and <b>3 other friends</b> have birthdays today.
           </span>
         </div>
-        <img
-          className="w-full rounded-xl mt-7 mb-7 cursor-pointer"
-          src={ad}
-          alt="THAT'S a raid"
-        />
-        <h4 className="mb-5 font-medium text-lg">Online Friends</h4>
-        <ul className="m-0 p-0">
+        <img className="rightbarAd" src={ad} alt="" />
+        <h4 className="rightbarTitle">Online Friends</h4>
+        <ul className="rightbarFriendList">
           {Users.map((u) => (
             <Online key={u.id} user={u} />
           ))}
@@ -31,85 +26,59 @@ const RightBar = ({ profile }) => {
     );
   };
 
-  const ProfileRightBar = () => {
+  const ProfileRightbar = () => {
     return (
       <>
-        <h4 className="text-lg font-medium mb-2">User Information</h4>
-        <div className="mb-7">
-          <div className="mb-2">
-            <span className="font-medium text-gray-500 mr-2">City:</span>
-            <span className="font-light">Kyiv</span>
+        <h4 className="rightbarTitle">User information</h4>
+        <div className="rightbarInfo">
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">City:</span>
+            <span className="rightbarInfoValue">New York</span>
           </div>
-          <div className="mb-2">
-            <span className="font-medium text-gray-500 mr-2">From:</span>
-            <span className="font-light">Anchorage</span>
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">From:</span>
+            <span className="rightbarInfoValue">Madrid</span>
           </div>
-          <div className="mb-2">
-            <span className="font-medium text-gray-500 mr-2">Relationshp:</span>
-            <span className="font-light">Polyamorous</span>
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">Relationship:</span>
+            <span className="rightbarInfoValue">Single</span>
           </div>
         </div>
-        <h4 className="">User Friends</h4>
-        <div className="flex flex-wrap justify-between">
-          <div className="flex flex-column mb-5 cursor-pointer">
-            <img
-              className="w-24 h-24 object-cover rounded-xl"
-              src={defaultIcon}
-              alt="face"
-            />
-            <span className="">Username</span>
+        <h4 className="rightbarTitle">User friends</h4>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img src={defaultIcon} alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">John Carter</span>
           </div>
-          <div className="flex flex-column mb-5 cursor-pointer">
-            <img
-              className="w-24 h-24 object-cover rounded-xl"
-              src={defaultIcon}
-              alt="face"
-            />
-            <span className="">Username</span>
+          <div className="rightbarFollowing">
+            <img src={defaultIcon} alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">John Carter</span>
           </div>
-          <div className="flex flex-column mb-5 cursor-pointer">
-            <img
-              className="w-24 h-24 object-cover rounded-xl"
-              src={defaultIcon}
-              alt="face"
-            />
-            <span className="">Username</span>
+          <div className="rightbarFollowing">
+            <img src={defaultIcon} alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">John Carter</span>
           </div>
-          <div className="flex flex-column mb-5 cursor-pointer">
-            <img
-              className="w-24 h-24 object-cover rounded-xl"
-              src={defaultIcon}
-              alt="face"
-            />
-            <span className="">Username</span>
+          <div className="rightbarFollowing">
+            <img src={defaultIcon} alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">John Carter</span>
           </div>
-          <div className="flex flex-column mb-5 cursor-pointer">
-            <img
-              className="w-24 h-24 object-cover rounded-xl"
-              src={defaultIcon}
-              alt="face"
-            />
-            <span className="">Username</span>
+          <div className="rightbarFollowing">
+            <img src={defaultIcon} alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">John Carter</span>
           </div>
-          <div className="flex flex-column mb-5 cursor-pointer">
-            <img
-              className="w-24 h-24 object-cover rounded-xl"
-              src={defaultIcon}
-              alt="face"
-            />
-            <span className="">Username</span>
+          <div className="rightbarFollowing">
+            <img src={defaultIcon} alt="" className="rightbarFollowingImg" />
+            <span className="rightbarFollowingName">John Carter</span>
           </div>
         </div>
       </>
     );
   };
   return (
-    <div className="w-1/4 h-full">
-      <div className="pt-5 pr-5">
-        <ProfileRightBar />
+    <div className="rightbar">
+      <div className="rightbarWrapper">
+        {profile ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
     </div>
   );
-};
-
-export default RightBar;
+}
